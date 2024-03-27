@@ -37,7 +37,7 @@ interface Two {
 interface Three extends One, Two {
   add(): number;
 }
-//implementing interface three 
+//implementing interface three
 
 // class A implements Three {
 //   constructor(public x: number, public y: number, public z: number) {}
@@ -52,7 +52,6 @@ interface Three extends One, Two {
 //   constructor(public x: number, public y: number, public z: number) {}
 
 // }
-
 
 //we can exrend and implement in the same class
 
