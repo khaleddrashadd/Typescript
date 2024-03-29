@@ -1,2 +1,3 @@
 // import './classes';
-import './advancedTypes';
+// import './advancedTypes';
+import './indexSignature';

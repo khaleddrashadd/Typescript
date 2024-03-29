@@ -48,26 +48,26 @@
 
 //discriminated unions
 
-type A = {
-  type: 'bird';
-  flyingSpeed: number;
-};
+// type A = {
+//   type: 'bird';
+//   flyingSpeed: number;
+// };
 
-type B = {
-  type: 'horse';
-  speed: number;
-};
+// type B = {
+//   type: 'horse';
+//   speed: number;
+// };
 
-type C = A | B;
+// type C = A | B;
 
-const fn = (animal: C) => {
-  // console.log(animal.speed);
-  //one solution is
-  // if ('speed' in animal) console.log(animal.speed);
+// const fn = (animal: C) => {
+//   // console.log(animal.speed);
+//   //one solution is
+//   // if ('speed' in animal) console.log(animal.speed);
 
-  //second solution is
+//   //second solution is
 
-  if (animal.type === 'horse') console.log(animal.speed);
-};
+//   if (animal.type === 'horse') console.log(animal.speed);
+// };
 
-fn({ type: 'horse', speed: 100 });
+// fn({ type: 'horse', speed: 100 });
