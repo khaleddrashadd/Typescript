@@ -13,3 +13,4 @@ const bb: Readonly<As> = {
   ...ob,
   ver: true,
 };
+
