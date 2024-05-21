@@ -51,3 +51,24 @@ b.dataArr = 22;
 
 const arr = <readonly number[]>[1, 2, 3];
 arr.push(55); //error
+
+// const o: {
+//   [key: string]: string | number;
+//   age: number;
+//   name: string;
+// } = {
+//   name: 'asd',
+//   age: 25,
+// };
+const o = {
+  name: 'asd',
+  age: 25,
+};
+
+// for (const key in o) {
+//  console.log(o[key as keyof typeof o])
+// }
+// for (const key in o) {
+//   console.log(o[key as keyof typeof o]);
+// }
+

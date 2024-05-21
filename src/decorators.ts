@@ -46,14 +46,18 @@ class B {
 /////////////////////////////////////
 // Method decorator
 /////////////////////////////////////
-function logMethod(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+function logMethod(
+  target: any,
+  propertyKey: string,
+  descriptor: PropertyDescriptor
+) {
   console.log('target', target);
   console.log('propertyKey', propertyKey);
   console.log('descriptor', descriptor);
 }
 
 class Method {
-  public aa:string = 'aa';
+  public aa: string = 'aa';
   @logMethod
   met() {
     console.log('inside method');
@@ -65,8 +69,8 @@ class Method {
 
 function log(target: any, propertyName: string) {
   console.log('target', target);
-  /* this is the prototype of the class if it was static, it would be the class itself */;
-  const b = new target.constructor();
+  /* this is the prototype of the class if it was static, it would be the class itself */ const b =
+    new target.constructor();
   console.log(b);
   console.log('propertyName', propertyName);
 }
@@ -83,25 +87,32 @@ class Prop {
 //////////////////////////////
 //parameter decorator
 //////////////////////////////
-function logParameter(target: any, propertyKey: string, parameterIndex: number) {
+function logParameter(
+  target: any,
+  propertyKey: string,
+  parameterIndex: number
+) {
   console.log('target', target);
   console.log('propertyKey', propertyKey);
   console.log('parameterIndex', parameterIndex);
 }
 
 class Parameter {
-  public aa:string = 'aa';
+  public aa: string = 'aa';
   method(@logParameter a: string) {
     console.log('inside method');
   }
 }
 
-
 //////////////////////////////
 // Accessor decorator
 //////////////////////////////
 
-function logAccessor(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+function logAccessor(
+  target: any,
+  propertyKey: string,
+  descriptor: PropertyDescriptor
+) {
   console.log('target', target);
   console.log('propertyKey', propertyKey);
   console.log('descriptor', descriptor);
@@ -119,3 +130,22 @@ class Accessor {
 }
 
 //unique
+
+interface Int<T> {
+  aw(ar: T): T;
+}
+
+class II<T> implements Int<T> {
+  constructor(
+
+  ) {
+    console.log('inside class');
+  }
+  aw(ar: T): T {
+    return ar;
+  }
+}
+
+
+const iii = new II<number>();
+iii.aw(22);
